@@ -1,0 +1,41 @@
+/* ============================================
+   index.css - التنسيقات الأساسية للموقع كله
+   ============================================ */
+
+/* استدعاء الفونتات */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+/* CSS Variables - متغيرات الألوان (نستخدمها في كل الموقع) */
+:root {
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --card: #16161f;
+  --border: #ffffff0f;
+  --accent: #c8f04d;
+  --accent2: #7c6af7;
+  --accent3: #f04d8c;
+  --text: #f0f0f5;
+  --muted: #6b6b80;
+  --success: #4df0a0;
+}
+
+/* Reset عام لكل العناصر */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+/* البودي - خلفية الموقع كله */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Tajawal', sans-serif;
+  min-height: 100vh;
+  direction: rtl;  /* عشان الموقع عربي */
+}
+
+/* تخصيص شكل الـ scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }

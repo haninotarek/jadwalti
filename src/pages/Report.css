@@ -1,0 +1,231 @@
+
+   .report {
+    min-height: 100vh;
+    background: var(--bg);
+  }
+  
+  /* HEADER */
+  .report-header {
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .report-header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  
+  .report-header .logo-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent);
+  }
+  
+  .report-nav {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .nav-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: 'Tajawal', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .nav-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  
+  /* CONTAINER */
+  .report-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .report-title {
+    margin-bottom: 32px;
+  }
+  
+  .report-title h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  
+  .report-title p {
+    color: var(--muted);
+    font-size: 15px;
+  }
+  
+  /* STATS GRID */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-3px);
+    border-color: #ffffff20;
+  }
+  
+  .stat-card.stat-primary {
+    background: linear-gradient(135deg, #c8f04d15, #c8f04d05);
+    border-color: #c8f04d30;
+  }
+  
+  .stat-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+    opacity: 0.7;
+  }
+  
+  .stat-value {
+    font-family: 'Space Mono', monospace;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  
+  .stat-value-sm {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .stat-label {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  
+  /* REPORT CARDS */
+  .report-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  
+  .empty-msg {
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    padding: 24px;
+  }
+  
+  /* SESSIONS LIST */
+  .sessions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .session-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: all 0.2s;
+  }
+  
+  .session-item:hover {
+    border-color: #ffffff15;
+  }
+  
+  .session-info {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .session-subject {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  
+  .session-meta {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  
+  .session-duration {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .report-header {
+      padding: 16px 20px;
+      flex-direction: column;
+      gap: 12px;
+      align-items: stretch;
+    }
+    
+    .report-container {
+      padding: 24px 16px;
+    }
+    
+    .report-title h1 {
+      font-size: 24px;
+    }
+    
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-card {
+      padding: 16px;
+    }
+    
+    .stat-value {
+      font-size: 22px;
+    }
+  }

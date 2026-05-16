@@ -1,0 +1,143 @@
+
+   .focus-overlay {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: focusFadeIn 0.4s ease;
+  }
+  
+  @keyframes focusFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* خلفية متوهجة خفيفة */
+  .focus-bg-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: var(--accent);
+    border-radius: 50%;
+    filter: blur(200px);
+    opacity: 0.08;
+    pointer-events: none;
+  }
+  
+  /* المحتوى */
+  .focus-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 40px;
+    max-width: 90vw;
+  }
+  
+  /* اسم المادة */
+  .focus-subject {
+    font-size: 14px;
+    color: #ffffff50;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  
+  /* التايمر الكبير */
+  .focus-timer {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(80px, 18vw, 180px);
+    font-weight: 700;
+    color: var(--accent);
+    text-shadow: 0 0 80px #c8f04d50, 0 0 120px #c8f04d30;
+    margin-bottom: 32px;
+    letter-spacing: -4px;
+    line-height: 1;
+  }
+  
+  /* شريط التقدم */
+  .focus-progress {
+    width: 100%;
+    max-width: 400px;
+    height: 4px;
+    background: #ffffff10;
+    border-radius: 100px;
+    margin: 0 auto 24px;
+    overflow: hidden;
+  }
+  
+  .focus-progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 100px;
+    transition: width 1s linear;
+    box-shadow: 0 0 12px var(--accent);
+  }
+  
+  /* الرسالة */
+  .focus-message {
+    font-size: 15px;
+    color: #ffffff40;
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+  
+  /* الأزرار */
+  .focus-controls {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .focus-btn {
+    background: transparent;
+    border: 1px solid #ffffff20;
+    color: #ffffff80;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .focus-btn:hover {
+    border-color: #ffffff40;
+    color: white;
+  }
+  
+  .focus-btn-toggle {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+    font-weight: 700;
+  }
+  
+  .focus-btn-toggle:hover {
+    background: var(--accent);
+    color: var(--bg);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px #c8f04d40;
+  }
+  
+  .focus-btn-exit {
+    border-color: #ffffff10;
+    color: #ffffff50;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .focus-subject {
+      letter-spacing: 3px;
+      font-size: 12px;
+    }
+    
+    .focus-content {
+      padding: 20px;
+    }
+  }

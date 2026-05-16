@@ -1,0 +1,52 @@
+
+import './SubjectCard.css'
+
+export default function SubjectCard({ subject, onRemove }) {
+    // حساب الأيام المتبقية للامتحان
+    const today = new Date()
+    const exam = new Date(subject.examDate)
+    const daysLeft = Math.max(
+        0,
+        Math.ceil((exam - today) / (1000 * 60 * 60 * 24))
+    )
+
+    // تحديد لون التحذير حسب قرب الامتحان
+    const getUrgencyColor = () => {
+        if (daysLeft === 0) return '#f04d8c'      // أحمر/وردي - النهارده
+        if (daysLeft <= 3) return '#f0a04d'       // برتقالي - قريب جداً
+        if (daysLeft <= 7) return '#c8f04d'       // أخضر - في الأسبوع
+        return '#6b6b80'                          // رمادي - بعيد
+    }
+
+    return (
+        <div className="subject-card">
+            {/* نقطة لون المادة */}
+            <div
+                className="subject-color-dot"
+                style={{ background: subject.color }}
+            />
+
+            {/* معلومات المادة */}
+            <div className="subject-info">
+                <div className="subject-name">{subject.name}</div>
+                <div
+                    className="subject-days"
+                    style={{ color: getUrgencyColor() }}
+                >
+                    {daysLeft === 0
+                        ? '🔴 امتحان النهارده!'
+                        : `${daysLeft} يوم متبقي`}
+                </div>
+            </div>
+
+            {/* زر الحذف */}
+            <button
+                className="subject-remove"
+                onClick={() => onRemove(subject.id)}
+                title="حذف المادة"
+            >
+                ×
+            </button>
+        </div>
+    )
+}
