@@ -4,8 +4,7 @@
     background: var(--bg);
   }
   
-  /* HEADER */
-  .report-header {
+      .report-header {
     padding: 20px 40px;
     border-bottom: 1px solid var(--border);
     background: var(--surface);
@@ -53,8 +52,7 @@
     color: var(--accent);
   }
   
-  /* CONTAINER */
-  .report-container {
+      .report-container {
     max-width: 900px;
     margin: 0 auto;
     padding: 40px 20px;
@@ -75,7 +73,6 @@
     font-size: 15px;
   }
   
-  /* STATS GRID */
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -133,8 +130,7 @@
     color: var(--muted);
   }
   
-  /* REPORT CARDS */
-  .report-card {
+      .report-card {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 20px;
@@ -155,7 +151,6 @@
     padding: 24px;
   }
   
-  /* SESSIONS LIST */
   .sessions-list {
     display: flex;
     flex-direction: column;
@@ -200,7 +195,7 @@
     color: var(--accent);
   }
   
-  /* RESPONSIVE */
+  
   @media (max-width: 640px) {
     .report-header {
       padding: 16px 20px;

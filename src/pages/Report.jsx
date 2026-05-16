@@ -1,6 +1,3 @@
-// ============================================
-// Report.jsx - صفحة التقرير والإحصائيات
-// ============================================
 
 import { useNavigate } from 'react-router-dom'
 import { useApp } from '../context/AppContext'
@@ -11,9 +8,7 @@ export default function Report() {
     const { subjects, studyLog } = useApp()
     const navigate = useNavigate()
 
-    // ----- حسابات الإحصائيات -----
 
-    // إجمالي الدقائق للمادة (لكل التاريخ)
     const getSubjectTotal = (subjectId) => {
         return studyLog
             .filter((log) => log.subjectId === subjectId)
@@ -64,7 +59,7 @@ export default function Report() {
 
     return (
         <div className="report">
-            {/* HEADER */}
+            { }
             <header className="report-header">
                 <div className="logo" onClick={() => navigate('/')}>
                     <div className="logo-dot"></div>
@@ -86,14 +81,14 @@ export default function Report() {
                 </div>
             </header>
 
-            {/* CONTENT */}
+            { }
             <div className="report-container">
                 <div className="report-title">
                     <h1> تقريرك</h1>
                     <p>إنجازك في المذاكرة بالتفصيل</p>
                 </div>
 
-                {/* ===== الإحصائيات السريعة ===== */}
+                { }
                 <div className="stats-grid">
                     <div className="stat-card stat-primary">
                         <div className="stat-icon">⏱</div>
@@ -122,7 +117,7 @@ export default function Report() {
                     </div>
                 </div>
 
-                {/* ===== Progress Bars لكل مادة ===== */}
+                { }
                 <div className="report-card">
                     <h3 className="card-title">تقدمك في كل مادة</h3>
 
@@ -151,7 +146,7 @@ export default function Report() {
                     )}
                 </div>
 
-                {/* ===== سجل الجلسات ===== */}
+                { }
                 <div className="report-card">
                     <h3 className="card-title">آخر الجلسات</h3>
 

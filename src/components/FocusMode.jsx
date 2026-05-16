@@ -56,27 +56,26 @@ export default function FocusMode({ subject, onExit }) {
         }
     }, [])
 
-    // تنسيق الأرقام
     const pad = (n) => String(n).padStart(2, '0')
 
-    // حساب نسبة التقدم
+    // هنا بنحسب نسبه التقدم 
     const totalSeconds = settings.pomodoroMinutes * 60
     const currentSeconds = minutes * 60 + seconds
     const progress = ((totalSeconds - currentSeconds) / totalSeconds) * 100
 
     return (
         <div className="focus-overlay">
-            {/* نقاط خفيفة في الخلفية */}
+            { }
             <div className="focus-bg-glow"></div>
 
-            {/* المحتوى الأساسي */}
+            { }
             <div className="focus-content">
-                {/* اسم المادة */}
+                { }
                 <div className="focus-subject">
                     {subject?.subjectName || 'وقت التركيز'}
                 </div>
 
-                {/* التايمر */}
+                { }
                 <div className="focus-timer">
                     {pad(minutes)}:{pad(seconds)}
                 </div>
@@ -89,14 +88,14 @@ export default function FocusMode({ subject, onExit }) {
                     />
                 </div>
 
-                {/* رسالة تحفيزية */}
+                { }
                 <div className="focus-message">
                     {running
                         ? '✦ أنت في وضع التركيز الكامل'
                         : '⏸ التايمر متوقف'}
                 </div>
 
-                {/* أزرار التحكم */}
+                { }
                 <div className="focus-controls">
                     <button
                         className="focus-btn focus-btn-toggle"

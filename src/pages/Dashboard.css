@@ -4,7 +4,7 @@
     background: var(--bg);
   }
   
-  /* HEADER */
+
   .dashboard-header {
     padding: 20px 40px;
     border-bottom: 1px solid var(--border);
@@ -29,7 +29,6 @@
     box-shadow: 0 0 10px var(--accent);
   }
   
-  /* CONTAINER */
   .dashboard-container {
     max-width: 800px;
     margin: 0 auto;
@@ -50,9 +49,7 @@
     color: var(--muted);
     font-size: 15px;
   }
-  
-  /* ADD CARD */
-  .add-card {
+    .add-card {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 20px;
@@ -117,7 +114,7 @@
     box-shadow: 0 8px 20px #c8f04d40;
   }
   
-  /* SUBJECTS GRID */
+
   .subjects-header {
     font-size: 14px;
     color: var(--muted);
@@ -132,8 +129,7 @@
     margin-bottom: 32px;
   }
   
-  /* GENERATE BUTTON */
-  .btn-generate {
+    .btn-generate {
     width: 100%;
     background: var(--accent);
     color: var(--bg);
@@ -152,7 +148,6 @@
     box-shadow: 0 8px 30px #c8f04d40;
   }
   
-  /* EMPTY STATE */
   .empty-state {
     text-align: center;
     padding: 60px 20px;
@@ -178,7 +173,7 @@
     font-size: 14px;
   }
   
-  /* RESPONSIVE */
+      
   @media (max-width: 640px) {
     .add-card {
       grid-template-columns: 1fr;

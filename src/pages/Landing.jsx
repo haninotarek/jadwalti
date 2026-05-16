@@ -52,7 +52,7 @@ export default function Landing() {
                         </button>
                     </div>
 
-                    {/* Stats - الأرقام */}
+                    { }
                     <div className="stats">
                         <div className="stat">
                             <div className="stat-num">25</div>
@@ -71,7 +71,7 @@ export default function Landing() {
                     </div>
                 </section>
 
-                {/* HOW IT WORKS - إزاي بيشتغل */}
+                { }
                 <section className="how">
                     <div className="section-title">
                         <h2>إزاي بيشتغل؟</h2>

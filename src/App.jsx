@@ -14,10 +14,10 @@ function App() {
     // AppProvider بيلف كل حاجة عشان كل الصفحات تقدر توصل للذاكرة المركزية
     <AppProvider>
 
-      {/* BrowserRouter بيفعّل نظام المسارات */}
+      { }
       <BrowserRouter>
 
-        {/* Routes بيحدد قواعد التوجيه */}
+        { }
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/dashboard" element={<Dashboard />} />

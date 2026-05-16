@@ -12,21 +12,21 @@ export default function SubjectCard({ subject, onRemove }) {
 
     // تحديد لون التحذير حسب قرب الامتحان
     const getUrgencyColor = () => {
-        if (daysLeft === 0) return '#f04d8c'      // أحمر/وردي - النهارده
-        if (daysLeft <= 3) return '#f0a04d'       // برتقالي - قريب جداً
-        if (daysLeft <= 7) return '#c8f04d'       // أخضر - في الأسبوع
-        return '#6b6b80'                          // رمادي - بعيد
+        if (daysLeft === 0) return '#f04d8c'
+        if (daysLeft <= 3) return '#f0a04d'
+        if (daysLeft <= 7) return '#c8f04d'
+        return '#6b6b80'
     }
 
     return (
         <div className="subject-card">
-            {/* نقطة لون المادة */}
+            { }
             <div
                 className="subject-color-dot"
                 style={{ background: subject.color }}
             />
 
-            {/* معلومات المادة */}
+            { }
             <div className="subject-info">
                 <div className="subject-name">{subject.name}</div>
                 <div
@@ -39,7 +39,8 @@ export default function SubjectCard({ subject, onRemove }) {
                 </div>
             </div>
 
-            {/* زر الحذف */}
+            { }
+
             <button
                 className="subject-remove"
                 onClick={() => onRemove(subject.id)}

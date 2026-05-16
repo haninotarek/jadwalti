@@ -15,7 +15,6 @@
     to { opacity: 1; }
   }
   
-  /* خلفية متوهجة خفيفة */
   .focus-bg-glow {
     position: absolute;
     width: 600px;
@@ -27,7 +26,6 @@
     pointer-events: none;
   }
   
-  /* المحتوى */
   .focus-content {
     position: relative;
     z-index: 1;
@@ -36,7 +34,6 @@
     max-width: 90vw;
   }
   
-  /* اسم المادة */
   .focus-subject {
     font-size: 14px;
     color: #ffffff50;
@@ -46,7 +43,6 @@
     font-weight: 500;
   }
   
-  /* التايمر الكبير */
   .focus-timer {
     font-family: 'Space Mono', monospace;
     font-size: clamp(80px, 18vw, 180px);
@@ -58,7 +54,6 @@
     line-height: 1;
   }
   
-  /* شريط التقدم */
   .focus-progress {
     width: 100%;
     max-width: 400px;
@@ -77,15 +72,14 @@
     box-shadow: 0 0 12px var(--accent);
   }
   
-  /* الرسالة */
+  
   .focus-message {
     font-size: 15px;
     color: #ffffff40;
     margin-bottom: 48px;
     font-weight: 300;
   }
-  
-  /* الأزرار */
+
   .focus-controls {
     display: flex;
     gap: 12px;

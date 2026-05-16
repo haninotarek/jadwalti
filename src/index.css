@@ -19,23 +19,20 @@
   --success: #4df0a0;
 }
 
-/* Reset عام لكل العناصر */
 * { 
   margin: 0; 
   padding: 0; 
   box-sizing: border-box; 
 }
 
-/* البودي - خلفية الموقع كله */
 body {
   background: var(--bg);
   color: var(--text);
   font-family: 'Tajawal', sans-serif;
   min-height: 100vh;
-  direction: rtl;  /* عشان الموقع عربي */
+  direction: rtl; 
 }
 
-/* تخصيص شكل الـ scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }

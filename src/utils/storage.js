@@ -1,4 +1,3 @@
-// storage.js - التعامل مع localStorage
 
 // حفظ بيانات في localStorage
 export function saveToStorage(key, value) {

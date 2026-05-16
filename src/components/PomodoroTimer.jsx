@@ -6,14 +6,13 @@ import './PomodoroTimer.css'
 export default function PomodoroTimer({ subject, onFocus }) {
     const { settings, logSession } = useApp()
 
-    // ----- States -----
     const [timeLeft, setTimeLeft] = useState(settings.pomodoroMinutes * 60)
     const [running, setRunning] = useState(false)
     const [isBreak, setIsBreak] = useState(false)
 
     const intervalRef = useRef(null)
 
-    // ----- التايمر -----
+    // timer 
     useEffect(() => {
         if (running && timeLeft > 0) {
             intervalRef.current = setInterval(() => {
@@ -24,20 +23,18 @@ export default function PomodoroTimer({ subject, onFocus }) {
         return () => clearInterval(intervalRef.current)
     }, [running, timeLeft])
 
-    // ----- لما التايمر يوصل صفر -----
+    // لما التايمر يوصل لل 0
     useEffect(() => {
         if (timeLeft === 0 && running) {
             setRunning(false)
 
-            // لو كنا بنذاكر (مش راحة)، نسجل الجلسة
+
             if (!isBreak && subject) {
                 logSession(subject.subjectId, settings.pomodoroMinutes)
             }
 
-            // تنبيه
             alert(isBreak ? ' خلصت الراحة، يلا نكمل!' : '🎉 خلصت الجلسة! خد راحة')
 
-            // نحول من مذاكرة لراحة أو العكس
             const nextIsBreak = !isBreak
             setIsBreak(nextIsBreak)
             setTimeLeft(
@@ -48,7 +45,6 @@ export default function PomodoroTimer({ subject, onFocus }) {
         }
     }, [timeLeft, running, isBreak, subject, settings, logSession])
 
-    // ----- دوال التحكم -----
     const toggleTimer = () => {
         setRunning((r) => !r)
     }
@@ -60,7 +56,6 @@ export default function PomodoroTimer({ subject, onFocus }) {
         setTimeLeft(settings.pomodoroMinutes * 60)
     }
 
-    // تنسيق الأرقام
     const minutes = Math.floor(timeLeft / 60)
     const seconds = timeLeft % 60
     const pad = (n) => String(n).padStart(2, '0')

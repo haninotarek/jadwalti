@@ -5,17 +5,14 @@ export function generateSchedule(subjects, dailyHours) {
 
     const today = new Date()
 
-    // ----- خطوة 1: حساب الأيام المتبقية ووزن كل مادة -----
     const subjectsWithWeight = subjects.map((subject) => {
         const examDate = new Date(subject.examDate)
 
-        // عدد الأيام المتبقية (الحد الأدنى يوم واحد عشان نتجنب القسمة على صفر)
         const daysLeft = Math.max(
             1,
             Math.ceil((examDate - today) / (1000 * 60 * 60 * 24))
         )
 
-        // الوزن: كل ما الامتحان أقرب → الوزن أعلى
         const weight = 1 / daysLeft
 
         return {
@@ -25,13 +22,11 @@ export function generateSchedule(subjects, dailyHours) {
         }
     })
 
-    // ----- خطوة 2: حساب مجموع الأوزان -----
     const totalWeight = subjectsWithWeight.reduce(
         (sum, s) => sum + s.weight,
         0
     )
 
-    // ----- خطوة 3: توزيع الساعات على كل مادة -----
     const schedule = subjectsWithWeight.map((subject) => {
         // نسبة الوزن × ساعات المذاكرة اليومية
         const hoursPerDay = (subject.weight / totalWeight) * dailyHours
@@ -47,7 +42,6 @@ export function generateSchedule(subjects, dailyHours) {
         }
     })
 
-    // ----- خطوة 4: ترتيب حسب قرب الامتحان -----
     schedule.sort((a, b) => a.daysLeft - b.daysLeft)
 
     return schedule

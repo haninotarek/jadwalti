@@ -24,7 +24,7 @@ export default function Study() {
                 />
             )}
 
-            {/* HEADER */}
+            { }
             <header className="study-header">
                 <div className="logo" onClick={() => navigate('/')}>
                     <div className="logo-dot"></div>
@@ -38,7 +38,7 @@ export default function Study() {
                 </button>
             </header>
 
-            {/* CONTENT */}
+            { }
             <div className="study-container">
                 <div className="study-grid">
                     <div>

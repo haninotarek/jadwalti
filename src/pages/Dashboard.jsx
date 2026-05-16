@@ -17,7 +17,6 @@ export default function Dashboard() {
 
     // دالة الإضافة
     const handleAdd = () => {
-        // تحقق إن الحقول مش فاضية
         if (!name.trim() || !examDate) {
             alert('اكتب اسم المادة وتاريخ الامتحان!')
             return
@@ -26,22 +25,20 @@ export default function Dashboard() {
         // إضافة المادة عن طريق الـ Context
         addSubject({ name: name.trim(), examDate })
 
-        // تفريغ الفورم
+        // بنفضي الفورم
         setName('')
         setExamDate('')
     }
 
-    // دالة توليد الخطة (لسه مش هتشتغل دلوقتي)
     const handleGenerate = () => {
         if (subjects.length === 0) {
             alert('ضيفي مواد الأول!')
             return
         }
 
-        // توليد الخطة باستخدام الخوارزمية
         const newSchedule = generateSchedule(subjects, settings.dailyHours)
 
-        // حفظ الخطة في الـ Context
+
         setSchedule(newSchedule)
 
         // طباعة الخطة في الـ Console عشان نشوفها (مؤقت)
@@ -67,7 +64,7 @@ export default function Dashboard() {
                     <p>ضيف موادك وتواريخ الامتحانات عشان نعملك خطة</p>
                 </div>
 
-                {/* فورم إضافة مادة */}
+                { }
                 <div className="add-card">
                     <div className="form-group">
                         <label>اسم المادة</label>
@@ -94,7 +91,7 @@ export default function Dashboard() {
                     </button>
                 </div>
 
-                {/* قائمة المواد */}
+                { }
                 {subjects.length > 0 ? (
                     <>
                         <div className="subjects-header">
@@ -110,13 +107,12 @@ export default function Dashboard() {
                             ))}
                         </div>
 
-                        {/* زر توليد الخطة */}
+                        { }
                         <button className="btn-generate" onClick={handleGenerate}>
                             اعملي خطتي
                         </button>
                     </>
                 ) : (
-                    // رسالة لو مفيش مواد
                     <div className="empty-state">
                         <div className="empty-icon">📭</div>
                         <h3>لسه مضفتش أي مادة</h3>
