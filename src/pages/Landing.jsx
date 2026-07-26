@@ -24,9 +24,6 @@ export default function Landing() {
             { }
             <div className="container">
                 <section className="hero">
-                    <div className="hero-tag">
-                        ✦ خطة مذاكرة ذكية لكل طالب
-                    </div>
                     <h1>
                         ذاكر أذكى،<br />
                         مش <span className="accent">أكتر</span>
