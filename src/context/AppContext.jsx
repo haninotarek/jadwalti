@@ -9,7 +9,6 @@ const AppContext = createContext()
 // 2. الـ Provider اللي هيلف الموقع كله ويوفر البيانات
 export function AppProvider({ children }) {
 
-    // ----- States: البيانات اللي هنشاركها -----
 
     // المواد اللي اليوزر ضافها
     const [subjects, setSubjects] = useState(
